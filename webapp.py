@@ -10,7 +10,7 @@ Created on Fri Feb 28 11:42:15 2025
 import numpy as np
 import pickle
 import streamlit as st
-loaded_model = pickle.load(open('C:/Users/Harsh/Desktop/projects/trained_model.sav','rb'))
+loaded_model = pickle.load(open('C:/Users/Harsh/Desktop/projects/diabetes/trained_model.sav','rb'))
 
 def diabetes_prediction(input_data):
     input_data =(5,166,72,19,175,25.8,0.587,51)
