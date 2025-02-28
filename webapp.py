@@ -5,9 +5,11 @@ Created on Fri Feb 28 11:42:15 2025
 @author: Harsh
 """
 
+
+
 import numpy as np
 import pickle
-
+import streamlit as st
 loaded_model = pickle.load(open('C:/Users/Harsh/Desktop/projects/trained_model.sav','rb'))
 
 def diabetes_prediction(input_data):
@@ -25,26 +27,25 @@ def diabetes_prediction(input_data):
     
     
 def main():
- st.title('diabetes prediction')
+    st.title('diabetes prediction')
     
-    pregnancies = st.text_input('no. of pregnancies')
-    glucose = st.text_input('glucose level')
-    bloodpressure = st.text_input('bp value')
-    skinthickness = st.text_input('skin thickness value')
-    insulin = st.text_input('insulin value')
-    bmi = st.text_input('bmi value')
-    age = st.text_input('age of a person')
-    diabtetespedigreefunction = st.text_input('diabtetes pedigree function value')
+    Pregnancies = st.text_input('no. of pregnancies')
+    Glucose = st.text_input('glucose level')
+    BloodPressure = st.text_input('bp value')
+    SkinThickness = st.text_input('skin thickness value')
+    Insulin = st.text_input('insulin value')
+    BMI= st.text_input('bmi value')
+    Age = st.text_input('age of a person')
+    DiabtetesPedigreeFunction = st.text_input('diabtetes pedigree function value')
     
     diagnosis = ''
     
     if st.button('Diabetes Test Result'):
-        diagnosis = diabetes_prediction([pregnancies,glucose,bloodpressure,skinthickness,insulin,bmi,age,diabtetespedigreefunction])
+        diagnosis = diabetes_prediction([Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,Age,DiabtetesPedigreeFunction])
 
     st.success(diagnosis) 
     
     
 if __name__ == '__main__':
     main()
-
-
+    
