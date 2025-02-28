@@ -24,6 +24,27 @@ def diabetes_prediction(input_data):
         print('diabetic')
     
     
-def main()
+def main():
+ st.title('diabetes prediction')
+    
+    pregnancies = st.text_input('no. of pregnancies')
+    glucose = st.text_input('glucose level')
+    bloodpressure = st.text_input('bp value')
+    skinthickness = st.text_input('skin thickness value')
+    insulin = st.text_input('insulin value')
+    bmi = st.text_input('bmi value')
+    age = st.text_input('age of a person')
+    diabtetespedigreefunction = st.text_input('diabtetes pedigree function value')
+    
+    diagnosis = ''
+    
+    if st.button('Diabetes Test Result'):
+        diagnosis = diabetes_prediction([pregnancies,glucose,bloodpressure,skinthickness,insulin,bmi,age,diabtetespedigreefunction])
+
+    st.success(diagnosis) 
+    
+    
+if __name__ == '__main__':
+    main()
 
 
