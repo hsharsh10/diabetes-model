@@ -2,8 +2,7 @@
 import numpy as np
 import pickle
 
-loaded_model = pickle.load(open('C:/Users/Harsh/Desktop/projects/diabetes/trained_model.sav','rb'))
-
+loaded_model = pickle.load(open('../trained_model.sav', 'rb'))
 #checking loaded model
 input_data =(5,166,72,19,175,25.8,0.587,51)
 
